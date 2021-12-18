@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Ceviche+One&family=Fjalla+One&family=Henny+Penny&family=Irish+Grover&family=Lobster&family=M+PLUS+1:wght@100&family=M+PLUS+2:wght@100&family=Montserrat+Alternates:wght@100&family=Poppins:wght@300&family=Rampart+One&family=Red+Hat+Display:wght@500&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+:root{
+    --paleBlue: hsl(225, 100%, 94%);
+    --brightBlue: hsl(245, 75%, 52%);
+    --veryPaleBlue: hsl(225, 100%, 98%);
+    --desaturatedBlue: hsl(224, 23%, 55%);
+    --darkBlue: hsl(223, 47%, 23%);
+}
+img{
+    max-width: 100%;
+}
+body{
+    background-color: var(--paleBlue);
+    font-family: "Red Hat Display", sans-serif;
+    text-align: center;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+.bgImg{
+    background: url(images/pattern-background-mobile.svg) no-repeat center/cover;
+    height: 400px;
+    position:absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+.container{
+    max-width: 375px;
+    margin: 10px auto;
+    padding-bottom:20px;
+    border-radius:20px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 3px 3px 3px hsl(228, 45%, 44%, 0.15);
+}
+.container .hero{
+    width: 100%;
+    border-radius: 20px 20px 0 0 ; 
+}
+.conteudo{
+    padding: 20px;
+}
+.conteudo h1{
+    color: hsl(223, 47%, 23%);
+}
+.conteudo p{
+    font-size: 16px;
+    line-height: 1.6em;
+    color: var(--desaturatedBlue);  
+}
+.conteudo p.desc{
+    padding: 0 30px;
+}
+.annual-plan{
+    background-color: var(--veryPaleBlue);
+    width: 90%;
+    margin: 20px auto;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.annual-plan h3{
+    color: hsl(223, 47%, 23%);
+}
+.annual-plan p{
+    color: var(--desaturatedBlue);
+    
+}
+.annual-plan .btn-change{
+    background-color: transparent;
+    color: var(--brightBlue);
+    text-decoration:underline;   
+}
+.buttons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.btn{
+    border: none;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+.btn-proceed{ 
+    width: 90%;
+    background-color: var(--brightBlue);
+    color: white;
+    margin-bottom:10px;
+    padding: 20px;
+}
+.btn-proceed:hover, .btn-change:hover{
+    opacity: 0.8;
+}
+.btn-cancel{
+    background-color: transparent;
+    color: var(--desaturatedBlue);
+}
+.btn-cancel:hover{
+    color: hsl(223, 47%, 23%);
+}
+@media (min-width: 768px){
+    .bgImg{
+        background:url(images/pattern-background-desktop.svg) no-repeat center/cover;
+        height: 50vh;
+    }
+    .container{
+        width: 500px;
+    }
+}
+.attribution { 
+    font-size: 11px; text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%); 
+}
